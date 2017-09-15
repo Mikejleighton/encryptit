@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+  <meta name="description" content="">
+  <meta name="author" content="">
+  <title>Encrypt It</title>
+
+  <link rel="stylesheet" type="text/css" href="https://bootswatch.com/flatly/bootstrap.min.css">
+  <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+  <link rel="stylesheet" href="css/new_style.css">
+
+  <script>
+    function services() {}
+  </script>
+</head>
+
+<body>
+
+    <div id="container"></div>
+
+
+  
+  <!--
+  <div class="site-wrapper">
+    <div class="site-wrapper-inner">
+      
+    </div>
+  </div>-->
+
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/open-iconic/1.1.1/font/css/open-iconic-bootstrap.css">
+
+
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/crypto-js/3.1.2/components/core-min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/crypto-js/3.1.2/components/sha256.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/crypto-js/3.1.2/components/enc-base64.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/crypto-js/3.1.2/rollups/aes.js"></script>
+
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.0.0-beta/js/bootstrap.min.js"></script>
+
+  <script src="https://cdn.jsdelivr.net/riot-route/3.0.0/route.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/riot/3.7.0/riot.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/riot/3.7.0/riot+compiler.js"></script>
+  <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN"
+    crossorigin="anonymous"></script>
+
+  <script src="./services/encrypt_service.js"></script>
+  <script src="./services/job_cache_service.js"></script>
+
+  <script type="riot/tag" src="tags/password.tag"></script>
+  <script type="riot/tag" src="tags/home.tag"></script>
+  <script type="riot/tag" src="tags/faq.tag"></script>
+  <script type="riot/tag" src="tags/navigation.tag"></script>
+  <script type="riot/tag" src="tags/work.tag"></script>
+  <script type="riot/tag" src="tags/done.tag"></script>
+  <script type="riot/tag" src="tags/demo.tag"></script>
+
+
+  <script>
+    route('/', function (name) {
+      document.getElementById('container').innerHTML = '<home></home>'
+      riot.mount('home')
+    })
+
+    route('/home', function (name) {
+      document.getElementById('container').innerHTML = '<home></home>'
+      riot.mount('home')
+    })
+
+    route('/faq', function (name) {
+      document.getElementById('container').innerHTML = '<faq></faq>'
+      riot.mount('faq')
+    })
+
+    route('/password', function (name) {
+      document.getElementById('container').innerHTML = '<password></password>'
+      riot.mount('password')
+    })
+
+    route('/work', function(name){
+      document.getElementById('container').innerHTML = '<work></work>'
+      riot.mount('work')
+    })
+
+    route('/done', function(name){
+      document.getElementById('container').innerHTML = '<done></done>'
+      riot.mount('done')
+    })
+
+    route('/demo', function(name){
+      document.getElementById('container').innerHTML = '<demo></demo>'
+      riot.mount('demo')
+    })
+
+    // Start routing. 
+    route.start(true);
+    riot.mount('navigation')
+  </script>
+
+</body>
+
+</html>

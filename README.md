@@ -15,3 +15,8 @@ http-server
 ```
 
 and direct you web browser to http://127.0.0.1:8080
+
+# Demo
+A demo can be see here
+
+https://mikejleighton.github.io/encryptit/index.html
